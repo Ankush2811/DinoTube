@@ -7,7 +7,7 @@ Mobile-first video player experience inspired by the YouTube mobile app. The UI 
 - Full-page player with custom controls (play/pause, seek, ±10s)
 - Related video list filtered by category with swipe/scroll reveal
 - Drag-to-minimize mini-player with persistent playback
-- Auto-play next with a 2-second countdown and cancel option
+- Auto-play next with countdown and cancel option
 
 ## Tech Notes
 The provided dataset contains YouTube URLs, which don't allow custom HTML5 controls. For the player experience, the app maps each dataset entry to a public MP4 source while preserving all titles, categories, and thumbnails.
