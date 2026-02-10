@@ -1,4 +1,4 @@
-# Dino Ventures Video Player
+# DinoTube Video Player
 
 Mobile-first video player experience inspired by the YouTube mobile app. The UI focuses on smooth playback, gesture-driven interactions, and a clean, responsive layout.
 
