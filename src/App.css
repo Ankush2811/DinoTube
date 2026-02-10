@@ -1,7 +1,7 @@
 .app {
   min-height: 100vh;
-  background: radial-gradient(circle at top, #141824 0%, #0b0e13 45%, #07090d 100%);
-  color: #eceef2;
+  background: radial-gradient(circle at top, #f6f7fb 0%, #eef1f6 45%, #e6ebf2 100%);
+  color: #1e2633;
 }
 
 .app-header {
@@ -12,10 +12,10 @@
   gap: 16px;
   position: sticky;
   top: 0;
-  background: rgba(9, 12, 18, 0.72);
+  background: rgba(244, 246, 251, 0.82);
   backdrop-filter: blur(18px);
   z-index: 2;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(18, 24, 32, 0.08);
 }
 
 .app-brand {
@@ -102,29 +102,39 @@
 
 .video-card {
   border: none;
-  padding: 0;
-  background: transparent;
+  padding: 10px;
+  background: #ffffff;
+  border: 1px solid rgba(30, 38, 51, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.06);
   color: inherit;
   text-align: left;
   width: 100%;
   flex: 0 0 auto;
   cursor: pointer;
-  transition: transform 180ms ease, opacity 180ms ease;
+  transition: transform 180ms ease, box-shadow 180ms ease;
   display: flex;
   flex-direction: column;
+  gap: 8px;
 }
 
 .video-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 18px rgba(15, 23, 42, 0.1);
+}
+
+.video-card:focus-visible {
+  outline: 2px solid rgba(93, 228, 199, 0.6);
+  outline-offset: 2px;
 }
 
 .video-thumb {
   position: relative;
-  border-radius: 16px;
+  border-radius: 12px;
   overflow: hidden;
-  background: #121722;
+  background: #eef2f7;
   aspect-ratio: 16 / 9;
-  box-shadow: 0 12px 26px rgba(3, 6, 10, 0.5);
+  box-shadow: inset 0 0 0 1px rgba(15, 23, 42, 0.06);
 }
 
 .video-thumb img {
@@ -138,29 +148,32 @@
   position: absolute;
   right: 8px;
   bottom: 8px;
-  background: rgba(7, 9, 13, 0.78);
+  background: rgba(15, 23, 42, 0.7);
   padding: 4px 7px;
   font-size: 0.7rem;
   border-radius: 999px;
+  color: #f8fafc;
 }
 
 .video-badge {
   position: absolute;
   left: 8px;
   top: 8px;
-  background: rgba(93, 228, 199, 0.2);
+  background: rgba(255, 255, 255, 0.92);
+  color: #1f2a3a;
   padding: 4px 9px;
   font-size: 0.6rem;
   border-radius: 999px;
   text-transform: uppercase;
   letter-spacing: 0.3px;
+  border: 1px solid rgba(30, 38, 51, 0.1);
 }
 
 .video-title {
-  margin-top: 10px;
+  margin-top: 2px;
   font-size: 0.9rem;
   line-height: 1.35;
-  color: #e7e9ee;
+  color: #1f2a3a;
   min-height: 2.6em;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -195,7 +208,7 @@
 .player {
   width: 100%;
   height: 100%;
-  background: #070a0f;
+  background: radial-gradient(circle at top, #f6f7fb 0%, #eef1f6 45%, #e6ebf2 100%);
   display: flex;
   flex-direction: column;
   transform: translateY(var(--drag-offset, 0px));
@@ -206,7 +219,7 @@
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
-  background: #05070b;
+  background: #e9edf4;
   overflow: hidden;
 }
 
@@ -239,18 +252,18 @@
 .next-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(3, 6, 10, 0.6);
+  background: rgba(230, 235, 242, 0.72);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 12px;
-  color: #f2f3f6;
+  color: #1f2a3a;
 }
 
 .next-overlay button {
-  background: #f2f3f6;
-  color: #0c0f14;
+  background: #1f2a3a;
+  color: #f7f9fc;
   border: none;
   padding: 8px 16px;
   border-radius: 999px;
@@ -267,17 +280,17 @@
 .player-title {
   font-size: 1rem;
   font-weight: 600;
-  color: #eef0f4;
+  color: #1f2a3a;
 }
 
 .player-category {
-  color: #9aa3b2;
+  color: #6f7c8e;
   font-size: 0.85rem;
 }
 
 .player-close {
-  background: rgba(93, 228, 199, 0.16);
-  color: #eafaf6;
+  background: rgba(31, 42, 58, 0.08);
+  color: #1f2a3a;
   border: none;
   padding: 7px 14px;
   border-radius: 999px;
@@ -294,16 +307,16 @@
   flex: 1;
   padding: 10px 14px;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  background: rgba(17, 21, 30, 0.9);
-  color: #eef1f6;
+  border: 1px solid rgba(31, 42, 58, 0.12);
+  background: #ffffff;
+  color: #1f2a3a;
   min-width: 110px;
   transition: transform 160ms ease, background 160ms ease, border 160ms ease, opacity 160ms ease;
 }
 
 .player-controls button:hover:enabled {
-  background: rgba(24, 31, 44, 0.95);
-  border-color: rgba(93, 228, 199, 0.35);
+  background: #f3f6fb;
+  border-color: rgba(31, 42, 58, 0.25);
   transform: translateY(-1px);
 }
 
@@ -318,12 +331,12 @@
   align-items: center;
   padding: 0 20px 16px;
   font-size: 0.85rem;
-  color: #c8ced8;
+  color: #6f7c8e;
 }
 
 .player-progress input[type="range"] {
   width: 100%;
-  accent-color: #5de4c7;
+  accent-color: #1f2a3a;
 }
 
 .player-sheet {
@@ -332,14 +345,14 @@
   right: 0;
   bottom: 0;
   height: 52vh;
-  background: #0f141d;
+  background: #f6f7fb;
   border-radius: 20px 20px 0 0;
   transform: translateY(70%);
   transition: transform 220ms ease;
   display: flex;
   flex-direction: column;
   padding: 10px 16px 16px;
-  box-shadow: 0 -12px 30px rgba(2, 5, 9, 0.45);
+  box-shadow: 0 -12px 30px rgba(15, 23, 42, 0.08);
 }
 
 .player-sheet.is-open {
@@ -350,7 +363,7 @@
   width: 42px;
   height: 4px;
   border-radius: 999px;
-  background: #2a3346;
+  background: #cfd6e1;
   margin: 0 auto 8px;
 }
 
@@ -372,8 +385,8 @@
   gap: 12px;
   align-items: center;
   border: none;
-  background: #141a24;
-  color: #eef1f6;
+  background: #ffffff;
+  color: #1f2a3a;
   padding: 8px;
   border-radius: 14px;
   text-align: left;
@@ -381,7 +394,7 @@
 }
 
 .sheet-item:hover {
-  background: #1a2230;
+  background: #f2f5fb;
   transform: translateY(-1px);
 }
 
@@ -393,7 +406,7 @@
 }
 
 .sheet-item.is-active {
-  outline: 1px solid #5de4c7;
+  outline: 1px solid rgba(31, 42, 58, 0.2);
 }
 
 .sheet-title {
@@ -402,7 +415,7 @@
 
 .sheet-time {
   font-size: 0.75rem;
-  color: #9aa3b2;
+  color: #6f7c8e;
 }
 
 .player-shell.mini {
@@ -473,5 +486,21 @@
 
   .video-row {
     grid-auto-columns: 240px;
+  }
+}
+
+@media (max-width: 640px) {
+  .feed {
+    padding: 12px 16px 120px;
+  }
+
+  .video-row {
+    grid-auto-columns: calc(100vw - 32px);
+    scroll-snap-type: x mandatory;
+    padding-bottom: 16px;
+  }
+
+  .video-card {
+    scroll-snap-align: start;
   }
 }
